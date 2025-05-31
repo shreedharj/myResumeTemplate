@@ -1,0 +1,156 @@
+\documentclass[10.5pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\textheight=10in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[letterpaper, portrait, margin=0.7in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+
+% For colored hyperlinks:
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+% For icons (e.g., link icons, GitHub, LinkedIn):
+\usepackage{fontawesome5}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=MidnightBlue,   % Link color
+    linkcolor=MidnightBlue,
+    citecolor=MidnightBlue
+}
+% COMMANDS
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1} #2 \end{verse}}
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{\textbf{#1} — \textit{#2} \hfill #3}}
+\newcommand{\award}[2]{{\textbf{#1} \hfill #2}}
+\newcommand{\paper}[2]{{#1}}
+\newcommand{\project}[2]{{\textbf{#1} \hfill #2}}
+\newcommand{\schoolwithcourses}[4]{\textbf{#1} #2 $\bullet$ #3 $\bullet$ #4 \vspace*{5pt}}
+\newcommand{\school}[4]{\textbf{#1} #2 #3 #4}
+\newenvironment{achievements}
+  {\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}  
+  {\end{list}}  
+
+
+\newcommand{\contact}[3]{%
+  \begin{center}
+    {\LARGE \scshape #1}\\[4pt]  % Name
+    #2 \\[1pt]                  % e.g., Address, phone, email
+    #3                           % e.g., Web links
+  \end{center}
+  \vspace*{-8pt}
+}
+
+% A helper command for link + icon:
+\newcommand{\iconlink}[3][MidnightBlue]{%
+  \href{#2}{\textcolor{#1}{#3}}%
+}
+
+\newcommand{\hyperlinkicon}[1]{%
+    \href{#1}{\textcolor{MidnightBlue}{\faExternalLink*}}%
+}
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\normalsize
+\smallskip
+\vspace*{-44pt}
+
+\contact{YOUR NAME}
+{Your Address, City, State, ZIP $\cdot$ (XXX) XXX-XXXX $\cdot$ \href{mailto:youremail@example.com}{youremail@example.com}}
+{%
+  \iconlink{https://yourwebsite.example.com}{\faHome\ Personal Webpage} \quad
+  \iconlink{https://www.linkedin.com/in/yourprofile}{\faLinkedin\ LinkedIn} \quad
+  \iconlink{https://github.com/yourusername}{\faGithub\ GitHub} \quad
+  \iconlink{https://scholar.google.com/yourprofile}{\faGraduationCap\ Google Scholar}
+}
+
+\header{Education}
+\school{University Name, City, State}
+{Degree in Major \hspace{1pt} $\bullet$ Minor or Specialization (GPA: X.XX/4.00)} \\
+\begin{achievements}
+    \item \textbf{Research Focus}: Brief description of research areas or topics of interest.
+\end{achievements}
+
+\header{Technical Skills}
+\begin{achievements}
+    \item \textbf{Programming Languages}: List languages (e.g., Python, C++, Java, etc.).
+    \item \textbf{Frameworks}: List frameworks (e.g., TensorFlow, PyTorch, Scikit-Learn, etc.).
+    \item \textbf{Tools}: List tools (e.g., Docker, Kubernetes, Git, Bash, \LaTeX{}, etc.).
+\end{achievements}
+
+\header{Research and Work Experience}
+\employer{Position Title}{Institution / Lab Name}{Month Year – Present}
+\begin{achievements}
+    \item Description of research or work responsibility, including methodologies used, models evaluated, or systems built.
+    \item Highlight key contributions, such as publications authored, benchmarks performed, or results obtained.
+\end{achievements}
+
+\employer{Position Title}{Institution / Lab Name}{Month Year – Present}
+\begin{achievements}
+    \item Description of experiments designed, analyses conducted, or features implemented.
+    \item Summarize outcomes, such as improved model accuracy, novel findings, or contributions to a publication.
+\end{achievements}
+
+\employer{Intern Title}{Organization Name}{Month Year – Month Year}
+\begin{achievements}
+    \item Describe internship projects: models built, frameworks used, or systems developed.
+    \item Mention any presentations, demos, or artifacts produced.
+\end{achievements}
+
+\employer{Position Title}{Department / Organization}{Month Year – Present}
+\begin{achievements}
+    \item List administrative or technical responsibilities, such as resource management, onboarding, or infrastructure improvements.
+    \item Quantify impact (e.g., “Reduced onboarding time by X\%,” “Saved X hours per week”).
+\end{achievements}
+
+\employer{Tutor / Grader}{University Department}{Month Year – Month Year}
+\begin{achievements}
+    \item Taught or graded courses (e.g., Discrete Mathematics, AI, etc.), describing how students benefited.
+    \item Quantify improvements if available (e.g., “Improved student performance by X\%”).
+\end{achievements}
+
+\header{Selected Publications}
+\paper{“Title of Paper One: Subtitle if Any” (Status if applicable)}, \href{https://link.to.paper.one}{\faExternalLink*} \\
+\paper{“Title of Paper Two: Subtitle if Any”}, \href{https://link.to.paper.two}{\faExternalLink*} \\
+\paper{“Title of Paper Three: Subtitle if Any”}, \href{https://link.to.paper.three}{\faExternalLink*}
+
+\header{Featured Projects}
+\project{Project Title One}{Month Year}
+\begin{achievements}
+    \item Brief description of project goals, models used, and key outcomes (e.g., “Trained a model using X, achieved Y performance”).
+    \item Outline architecture or framework details (e.g., “Built a PyTorch pipeline with Z layers,” “Implemented live metrics dashboard”).
+\end{achievements}
+
+\project{Project Title Two \href{https://github.com/yourusername/project-repo}{\faExternalLink*}}{Month Year}
+\begin{achievements}
+    \item Describe key project achievements, such as automation, monitoring, or tooling improvements.
+    \item Quantify impact (e.g., “Reduced manual oversight by X\%,” “Saved X hours weekly”).
+\end{achievements}
+
+\project{Project Title Three}{Month Year}
+\begin{achievements}
+    \item Summarize the project focus (e.g., “Trained a neural network on dataset XYZ, achieved X\% accuracy”).
+    \item Highlight techniques used (e.g., “Data augmentation, dropout, batch normalization”).
+\end{achievements}
+
+\header{Awards and Leadership}
+\award{Award Name or Recognition}{Month Year} \\
+\award{Grant / Fellowship Title}{Month Year} \\
+\award{Dean’s List or Honors (x\#)}{Semesters or Years} \\
+\award{Certification or Professional License}{Valid From – Valid To} \\
+\award{Another Leadership Role or Honor}{Month Year}
+
+\end{document}
