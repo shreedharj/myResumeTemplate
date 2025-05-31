@@ -39,7 +39,7 @@ Use these macros by replacing the placeholders (e.g., “Title”, “Organizati
 
 ## Usage
 1. Clone/Download this repository.  
-2. Create a new project in **[Overleaf](https://www.overleaf.com/)** and open `main.tex`. Often premium is free for university students.  
+2. Create a new project in **[Overleaf](https://www.overleaf.com/)**, open `main.tex` and all `.png` files. Note: the premium version is often free for university students.  
 4. Replace filler text with your own details, compile to PDF, and share!
 
 ## Resources
